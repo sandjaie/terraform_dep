@@ -1,0 +1,27 @@
+module "eks" {
+  source        = "../../native/containers/eks/cluster"
+  cluster_name  = var.cluster_name
+  eks_version   = var.eks_version
+  cluster_index = var.cluster_index
+  subnet_ids    = var.subnet_ids
+
+  environment = var.environment
+  cost_center = var.cost_center
+}
+
+module "node_group" {
+  source = "../../native/containers/eks/nodegroups"
+
+  min_size         = var.nodegroup.min_size
+  max_size         = var.nodegroup.max_size
+  desired_size     = var.nodegroup.desired_size
+  root_volume_size = var.nodegroup.root_volume_size
+  instance_type    = var.nodegroup.instance_type
+  eks_cluster_name = var.cluster_name
+  nodegroup_name   = var.nodegroup_name
+  subnet_ids       = var.subnet_ids
+
+  environment = var.environment
+  cost_center = var.cost_center
+
+}
