@@ -1,9 +1,13 @@
 module "eks" {
   source        = "../../native/containers/eks/cluster"
-  cluster_name  = var.cluster_name
+  cluster_name  = local.cluster_name
   eks_version   = var.eks_version
   cluster_index = var.cluster_index
   subnet_ids    = var.subnet_ids
+
+  cni_addon_version  = var.cni_addon_version
+  kube_proxy_version = var.kube_proxy_version
+  coredns_version    = var.coredns_version
 
   environment = var.environment
   cost_center = var.cost_center
@@ -17,7 +21,7 @@ module "node_group" {
   desired_size     = var.nodegroup.desired_size
   root_volume_size = var.nodegroup.root_volume_size
   instance_type    = var.nodegroup.instance_type
-  eks_cluster_name = var.cluster_name
+  cluster_name     = local.cluster_name
   nodegroup_name   = var.nodegroup_name
   subnet_ids       = var.subnet_ids
 

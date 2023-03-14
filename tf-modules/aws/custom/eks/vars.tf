@@ -52,3 +52,21 @@ variable "cost_center" {
   description = "cost_center that the vpc belongs too"
   type        = string
 }
+
+variable "cni_addon_version" {
+  description = "CNI plugin addon version"
+  type        = string
+  default     = null
+}
+
+variable "coredns_version" {
+  description = "coredns version - addon"
+  type        = string
+  default     = null
+}
+
+variable "kube_proxy_version" {
+  description = "kube_proxy version - addon"
+  type        = string
+  default     = null
+}

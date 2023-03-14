@@ -35,18 +35,6 @@ variable "cluster_index" {
   default     = 1
 }
 
-variable "enable_cni_addon" {
-  description = "Enables CNI plugin addon for the eks cluster"
-  type        = bool
-  default     = false
-}
-
-variable "resolve_conflicts" {
-  description = "Define how to resolve parameter value conflicts when when applying version updates to the add-on"
-  type        = string
-  default     = "OVERWRITE"
-}
-
 variable "enable_cluster_cw_logs" {
   description = "Boolean to enable EKS cluster logs"
   type        = bool
@@ -77,3 +65,8 @@ variable "kube_proxy_version" {
   default     = null
 }
 
+variable "resolve_conflicts" {
+  description = "Define how to resolve parameter value conflicts when when applying version updates to the add-on"
+  type        = string
+  default     = "OVERWRITE"
+}

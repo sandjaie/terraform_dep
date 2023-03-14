@@ -18,7 +18,7 @@ resource "aws_launch_template" "eks_nodegroup_launch_template" {
     resource_type = "instance"
 
     tags = merge(local.tags, {
-      Name = "nodes.${var.eks_cluster_name}-eks-${var.nodegroup_name}"
+      Name = "nodes.${var.cluster_name}-eks-${var.nodegroup_name}"
     })
   }
 
@@ -28,7 +28,7 @@ resource "aws_launch_template" "eks_nodegroup_launch_template" {
 }
 
 resource "aws_eks_node_group" "nodegroup" {
-  cluster_name    = var.eks_cluster_name
+  cluster_name    = var.cluster_name
   node_group_name = var.nodegroup_name
   node_role_arn   = aws_iam_role.eks_node_group_role.arn
   subnet_ids      = var.subnet_ids

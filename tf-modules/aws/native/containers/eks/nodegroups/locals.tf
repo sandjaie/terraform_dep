@@ -8,7 +8,7 @@ locals {
   tags = {
     Managed_by  = "Terraform"
     Environment = var.environment
-    Cluster     = var.eks_cluster_name
+    Cluster     = var.cluster_name
     CostCenter  = var.cost_center
   }
 }

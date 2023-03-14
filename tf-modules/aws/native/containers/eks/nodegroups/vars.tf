@@ -24,7 +24,7 @@ variable "security_group_ids" {
   default     = []
 }
 
-variable "eks_cluster_name" {
+variable "cluster_name" {
   description = "Name of the eks cluster"
   type        = string
 }

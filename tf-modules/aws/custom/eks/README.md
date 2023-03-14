@@ -29,9 +29,12 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_index"></a> [cluster\_index](#input\_cluster\_index) | Index of the cluster | `number` | `1` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name for EKS | `string` | n/a | yes |
+| <a name="input_cni_addon_version"></a> [cni\_addon\_version](#input\_cni\_addon\_version) | CNI plugin addon version | `string` | `null` | no |
+| <a name="input_coredns_version"></a> [coredns\_version](#input\_coredns\_version) | coredns version - addon | `string` | `null` | no |
 | <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center that the vpc belongs too | `string` | n/a | yes |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
+| <a name="input_kube_proxy_version"></a> [kube\_proxy\_version](#input\_kube\_proxy\_version) | kube\_proxy version - addon | `string` | `null` | no |
 | <a name="input_nodegroup"></a> [nodegroup](#input\_nodegroup) | Specifications of nodegroup | <pre>object({<br>    min_size         = number<br>    max_size         = number<br>    desired_size     = number<br>    root_volume_size = number<br>    instance_type    = string<br>  })</pre> | <pre>{<br>  "desired_size": 1,<br>  "instance_type": "t3.small",<br>  "max_size": 1,<br>  "min_size": 1,<br>  "root_volume_size": 20<br>}</pre> | no |
 | <a name="input_nodegroup_name"></a> [nodegroup\_name](#input\_nodegroup\_name) | Name of the nodegroup | `string` | `"eks-nodes"` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Subnets in which the Mongodb Instances should be spun up | `list(string)` | n/a | yes |
