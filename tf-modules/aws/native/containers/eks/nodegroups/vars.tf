@@ -27,6 +27,7 @@ variable "security_group_ids" {
 variable "cluster_name" {
   description = "Name of the eks cluster"
   type        = string
+  default     = null
 }
 
 variable "root_volume_size" {
