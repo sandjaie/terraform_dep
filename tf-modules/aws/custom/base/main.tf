@@ -1,10 +1,12 @@
 module "vpc" {
   source = "../../native/networking/vpc"
 
+  vpc_cidr = var.vpc_cidr
+  name     = var.vpc_name
+
   aws_region  = var.aws_region
   cost_center = var.cost_center
   environment = var.environment
-  vpc_cidr    = var.vpc_cidr
 }
 
 module "subnet" {

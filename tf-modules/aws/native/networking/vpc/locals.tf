@@ -1,6 +1,6 @@
 locals {
   name     = var.name == null ? var.environment : var.name
-  vpc_name = format("%s-vpc", local.name)
+  vpc_name = format("%s", local.name)
 
 
   ipv4_netmask_length = var.create_vpc_ipam ? var.ipv4_netmask_length : null
