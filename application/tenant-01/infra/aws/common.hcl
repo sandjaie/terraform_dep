@@ -1,0 +1,3 @@
+locals {
+  ami_id                 = ""
+}

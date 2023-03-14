@@ -1,0 +1,9 @@
+.terraform
+.terragrunt_cache
+**/.terraform.lock.hcl
+.env
+
+# IDE
+.idea/
+**/.DS_Store
+.DS_Store
