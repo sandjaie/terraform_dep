@@ -18,7 +18,7 @@ variable "vpc_cidr" {
   type        = string
 }
 
-variable "cidr_blocks" {
+variable "subnet_cidrs" {
   description = "The IPv4 CIDR block for the subnet."
   type        = list(string)
 }
@@ -26,4 +26,9 @@ variable "cidr_blocks" {
 variable "availability_zones" {
   description = "AZ for the subnet."
   type        = list(string)
+}
+
+variable "subnet_type" {
+  description = "Tag to identßitify the subnet purpose. E.g Private, Public"
+  type        = string
 }

@@ -11,9 +11,9 @@ module "subnet" {
   source = "../../native/networking/subnet"
 
   availability_zones = var.availability_zones
-  cidr_blocks        = var.cidr_blocks
+  cidr_blocks        = var.subnet_cidrs
+  subnet_type        = var.subnet_type
+  vpc_id             = module.vpc.vpc_id
   cost_center        = var.cost_center
   environment        = var.environment
-  region             = var.aws_region
-  vpc_id             = module.vpc.vpc_id
 }

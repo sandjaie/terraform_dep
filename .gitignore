@@ -1,5 +1,6 @@
 .terraform
-.terragrunt_cache
+.terraform.lock.hcl
+.terragrunt-cache
 **/.terraform.lock.hcl
 .env
 

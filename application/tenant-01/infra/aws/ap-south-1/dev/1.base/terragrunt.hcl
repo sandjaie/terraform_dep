@@ -1,6 +1,5 @@
 terraform {
-  #source = "git::ssh://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/base?ref=master"
-  source = "../../"
+  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/base?ref=main"
 }
 
 include "root" {
@@ -8,6 +7,6 @@ include "root" {
 }
 
 inputs = {
-  vpc_cidr             = "10.100.0.0/22"
-  subnet_cidrs  = ["10.100.0.0/24", "10.100.1.0/24", "10.100.2.0/24"]
+  vpc_cidr    = "10.100.0.0/22"
+  cidr_blocks = ["10.100.0.0/24", "10.100.1.0/24", "10.100.2.0/24"]
 }

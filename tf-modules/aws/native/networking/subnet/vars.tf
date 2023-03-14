@@ -13,6 +13,7 @@ variable "availability_zones" {
   type        = list(string)
 }
 
+
 # tags
 variable "environment" {
   description = "Deployment environment. E.g. TPROD, APROD, CPROD"
@@ -27,7 +28,6 @@ variable "cost_center" {
 variable "subnet_type" {
   description = "Tag to identßitify the subnet purpose. E.g Private, Public"
   type        = string
-  default     = null
 }
 
 variable "tags" {

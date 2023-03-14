@@ -1,3 +1,4 @@
 locals {
-    aws_keyname            = ""
+  aws_keyname = ""
+  environment = "dev"
 }

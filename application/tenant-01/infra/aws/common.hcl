@@ -1,3 +1,4 @@
 locals {
-  ami_id                 = ""
+  ami_id      = ""
+  cost_center = "tenant-01"
 }
