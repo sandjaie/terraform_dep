@@ -40,7 +40,7 @@ variable "nodegroup" {
     max_size         = 1
     desired_size     = 1
     root_volume_size = 20
-    instance_type    = "t3.small"
+    instance_type    = "m5.large"
   }
 }
 

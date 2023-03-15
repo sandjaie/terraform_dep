@@ -16,7 +16,7 @@ variable "availability_zones" {
 
 # tags
 variable "environment" {
-  description = "Deployment environment. E.g. TPROD, APROD, CPROD"
+  description = "Deployment environment."
   type        = string
 }
 

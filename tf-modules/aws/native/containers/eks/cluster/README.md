@@ -45,6 +45,8 @@ No modules.
 | <a name="input_eks_service_ipv4_cidr"></a> [eks\_service\_ipv4\_cidr](#input\_eks\_service\_ipv4\_cidr) | The CIDR block to assign Kubernetes pod and service IP addresses from. | `string` | `"10.110.0.0/23"` | no |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
 | <a name="input_enable_cluster_cw_logs"></a> [enable\_cluster\_cw\_logs](#input\_enable\_cluster\_cw\_logs) | Boolean to enable EKS cluster logs | `bool` | `false` | no |
+| <a name="input_endpoint_private_access"></a> [endpoint\_private\_access](#input\_endpoint\_private\_access) | Whether the Amazon EKS private API server endpoint is enabled. | `bool` | `false` | no |
+| <a name="input_endpoint_public_access"></a> [endpoint\_public\_access](#input\_endpoint\_public\_access) | Whether the Amazon EKS public API server endpoint is enabled. | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
 | <a name="input_kube_proxy_version"></a> [kube\_proxy\_version](#input\_kube\_proxy\_version) | kube\_proxy version - addon | `string` | `null` | no |
 | <a name="input_resolve_conflicts"></a> [resolve\_conflicts](#input\_resolve\_conflicts) | Define how to resolve parameter value conflicts when when applying version updates to the add-on | `string` | `"OVERWRITE"` | no |

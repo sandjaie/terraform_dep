@@ -35,7 +35,7 @@ No resources.
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
 | <a name="input_kube_proxy_version"></a> [kube\_proxy\_version](#input\_kube\_proxy\_version) | kube\_proxy version - addon | `string` | `null` | no |
-| <a name="input_nodegroup"></a> [nodegroup](#input\_nodegroup) | Specifications of nodegroup | <pre>object({<br>    min_size         = number<br>    max_size         = number<br>    desired_size     = number<br>    root_volume_size = number<br>    instance_type    = string<br>  })</pre> | <pre>{<br>  "desired_size": 1,<br>  "instance_type": "t3.small",<br>  "max_size": 1,<br>  "min_size": 1,<br>  "root_volume_size": 20<br>}</pre> | no |
+| <a name="input_nodegroup"></a> [nodegroup](#input\_nodegroup) | Specifications of nodegroup | <pre>object({<br>    min_size         = number<br>    max_size         = number<br>    desired_size     = number<br>    root_volume_size = number<br>    instance_type    = string<br>  })</pre> | <pre>{<br>  "desired_size": 1,<br>  "instance_type": "m5.large",<br>  "max_size": 1,<br>  "min_size": 1,<br>  "root_volume_size": 20<br>}</pre> | no |
 | <a name="input_nodegroup_name"></a> [nodegroup\_name](#input\_nodegroup\_name) | Name of the nodegroup | `string` | `"app"` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Subnets in which the Mongodb Instances should be spun up | `list(string)` | n/a | yes |
 
