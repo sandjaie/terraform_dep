@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks_node_group_role" {
-  name               = "${local.name_prefix}-${var.nodegroup_name}"
+  name               = local.name_prefix
   assume_role_policy = data.aws_iam_policy_document.node_group_policy_document.json
   tags               = local.tags
 }

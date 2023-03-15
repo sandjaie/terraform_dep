@@ -16,4 +16,5 @@ inputs = {
   cni_addon_version  = "v1.12.5-eksbuild.2"
   kube_proxy_version = "v1.24.10-eksbuild.2"
   coredns_version    = "v1.8.7-eksbuild.4"
+  nodegroup_name     = "app-1"
 }
