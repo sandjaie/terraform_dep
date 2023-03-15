@@ -16,8 +16,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eks"></a> [eks](#module\_eks) | ../../native/containers/eks/cluster | n/a |
-| <a name="module_node_group"></a> [node\_group](#module\_node\_group) | ../../native/containers/eks/nodegroups | n/a |
+| <a name="module_eks"></a> [eks](#module\_eks) | ../../../native/containers/eks/cluster | n/a |
+| <a name="module_node_group"></a> [node\_group](#module\_node\_group) | ../../../native/containers/eks/nodegroups | n/a |
 
 ## Resources
 

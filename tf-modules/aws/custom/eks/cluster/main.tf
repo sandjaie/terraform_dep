@@ -1,5 +1,5 @@
 module "eks" {
-  source        = "../../native/containers/eks/cluster"
+  source        = "../../../native/containers/eks/cluster"
   cluster_name  = local.cluster_name
   eks_version   = var.eks_version
   cluster_index = var.cluster_index
@@ -14,7 +14,7 @@ module "eks" {
 }
 
 module "node_group" {
-  source = "../../native/containers/eks/nodegroups"
+  source = "../../../native/containers/eks/nodegroups"
 
   min_size         = var.nodegroup.min_size
   max_size         = var.nodegroup.max_size
