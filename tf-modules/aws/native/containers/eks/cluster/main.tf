@@ -22,10 +22,10 @@ resource "aws_eks_cluster" "eks_cluster" {
     "api", "audit", "authenticator", "controllerManager", "scheduler"
   ] : null
 
-    depends_on = [
-      aws_iam_role_policy_attachment.eks_cluster_policy,
-      aws_iam_role_policy_attachment.eks_service_policy
-    ]
+  depends_on = [
+    aws_iam_role_policy_attachment.eks_cluster_policy,
+    aws_iam_role_policy_attachment.eks_service_policy
+  ]
 
   tags = local.tags
 }

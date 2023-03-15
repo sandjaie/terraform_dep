@@ -28,3 +28,17 @@ module "node_group" {
   environment = var.environment
   cost_center = var.cost_center
 }
+
+resource "aws_ec2_tag" "subnet_cluster_tags" {
+  for_each    = toset(var.subnet_ids)
+  resource_id = each.value
+  key         = "kubernetes.io/cluster/${var.cluster_name}"
+  value       = "shared"
+}
+
+resource "aws_ec2_tag" "subnet_elb_tags" {
+  for_each    = toset(var.subnet_ids)
+  resource_id = each.value
+  key         = "kubernetes.io/role/internal-elb"
+  value       = "1"
+}
