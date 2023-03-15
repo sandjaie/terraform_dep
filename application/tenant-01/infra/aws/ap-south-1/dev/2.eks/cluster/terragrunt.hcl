@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/eks?ref=main"
+  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/eks/cluster?ref=main"
 }
 
 include "root" {
@@ -7,7 +7,7 @@ include "root" {
 }
 
 dependency "base" {
-  config_path = "../1.base"
+  config_path = "../../1.base"
 }
 
 inputs = {
