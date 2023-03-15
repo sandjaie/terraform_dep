@@ -1,5 +1,5 @@
 resource "aws_launch_template" "eks_nodegroup_launch_template" {
-  name = "eks-${local.lt_name_prefix}-nodegroup"
+  name = "${local.name_prefix}-eks-ng"
 
   instance_type = var.instance_type
 
@@ -23,7 +23,7 @@ resource "aws_launch_template" "eks_nodegroup_launch_template" {
   }
 
   tags = merge(local.tags, {
-    Name = "eks-${local.lt_name_prefix}-nodegroup"
+    Name = "${local.name_prefix}-eks-ng"
   })
 }
 

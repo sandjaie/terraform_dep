@@ -1,7 +1,7 @@
 locals {
-  name_prefix    = "${var.environment}-${var.cluster_index}-${var.nodegroup_name}"
-  lt_name_prefix = "${var.environment}-${var.nodegroup_name}"
-  ec2_ssh_key    = var.aws_keyname == null ? "sand10_apsouth1" : var.aws_keyname
+  name_prefix = "${var.cluster_name}-${var.nodegroup_name}"
+  #lt_name_prefix = "${var.environment}-${var.nodegroup_name}"
+  ec2_ssh_key = var.aws_keyname == null ? "sand10_apsouth1" : var.aws_keyname
 }
 
 locals {
