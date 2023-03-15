@@ -23,7 +23,6 @@ variable "subnet_ids" {
 variable "nodegroup_name" {
   description = "Name of the nodegroup"
   type        = string
-  default     = "eks-nodes"
 }
 
 variable "nodegroup" {

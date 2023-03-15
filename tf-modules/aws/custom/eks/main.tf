@@ -13,7 +13,7 @@ module "eks" {
   cost_center = var.cost_center
 }
 
-module "node_group" {
+module "default_node_group" {
   source = "../../native/containers/eks/nodegroups"
 
   min_size         = var.nodegroup.min_size
@@ -22,10 +22,9 @@ module "node_group" {
   root_volume_size = var.nodegroup.root_volume_size
   instance_type    = var.nodegroup.instance_type
   cluster_name     = local.cluster_name
-  nodegroup_name   = var.nodegroup_name
+  nodegroup_name   = "app"
   subnet_ids       = var.subnet_ids
 
   environment = var.environment
   cost_center = var.cost_center
-
 }
