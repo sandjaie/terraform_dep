@@ -4,9 +4,10 @@ variable "environment" {
 }
 
 variable "cost_center" {
-  description = "cost_center name"
+  description = "Cost center to which the resource is tagged under"
   type        = string
 }
+
 
 variable "aws_region" {
   description = "AWS region i.e us-west-2, us-east-1"

@@ -42,7 +42,7 @@ No modules.
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name for EKS | `string` | `null` | no |
 | <a name="input_cni_addon_version"></a> [cni\_addon\_version](#input\_cni\_addon\_version) | CNI plugin addon version | `string` | `null` | no |
 | <a name="input_coredns_version"></a> [coredns\_version](#input\_coredns\_version) | coredns version - addon | `string` | `null` | no |
-| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center name | `string` | n/a | yes |
+| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | Cost center to which the resource is tagged under | `string` | n/a | yes |
 | <a name="input_eks_service_ipv4_cidr"></a> [eks\_service\_ipv4\_cidr](#input\_eks\_service\_ipv4\_cidr) | The CIDR block to assign Kubernetes pod and service IP addresses from. | `string` | `"10.110.0.0/23"` | no |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
 | <a name="input_enable_cluster_cw_logs"></a> [enable\_cluster\_cw\_logs](#input\_enable\_cluster\_cw\_logs) | Boolean to enable EKS cluster logs | `bool` | `false` | no |

@@ -50,9 +50,10 @@ variable "environment" {
 }
 
 variable "cost_center" {
-  description = "cost_center name"
+  description = "Cost center to which the resource is tagged under"
   type        = string
 }
+
 variable "cni_addon_version" {
   description = "CNI plugin addon version"
   type        = string

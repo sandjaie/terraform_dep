@@ -34,7 +34,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region i.e us-west-2, us-east-1 | `string` | n/a | yes |
-| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center name | `string` | n/a | yes |
+| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | Cost center to which the resource is tagged under | `string` | n/a | yes |
 | <a name="input_create_vpc_ipam"></a> [create\_vpc\_ipam](#input\_create\_vpc\_ipam) | Boolean to enable IPAM Pool creation in the VPC | `bool` | `false` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment that the VPC belongs to | `string` | n/a | yes |
 | <a name="input_instance_tenancy"></a> [instance\_tenancy](#input\_instance\_tenancy) | Tenancy option for instances launched into the VPC. Options can be default or dedicated. | `string` | `"default"` | no |

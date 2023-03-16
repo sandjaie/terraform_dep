@@ -31,7 +31,7 @@ No resources.
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name for EKS | `string` | `null` | no |
 | <a name="input_cni_addon_version"></a> [cni\_addon\_version](#input\_cni\_addon\_version) | CNI plugin addon version | `string` | `null` | no |
 | <a name="input_coredns_version"></a> [coredns\_version](#input\_coredns\_version) | coredns version - addon | `string` | `null` | no |
-| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center name | `string` | n/a | yes |
+| <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | Cost center to which the resource is tagged under | `string` | n/a | yes |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
 | <a name="input_endpoint_private_access"></a> [endpoint\_private\_access](#input\_endpoint\_private\_access) | Whether the Amazon EKS private API server endpoint is enabled. | `bool` | `true` | no |
 | <a name="input_endpoint_public_access"></a> [endpoint\_public\_access](#input\_endpoint\_public\_access) | Whether the Amazon EKS public API server endpoint is enabled. | `bool` | `false` | no |

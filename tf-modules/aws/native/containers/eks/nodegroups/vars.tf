@@ -4,9 +4,10 @@ variable "environment" {
 }
 
 variable "cost_center" {
-  description = "cost_center name"
+  description = "Cost center to which the resource is tagged under"
   type        = string
 }
+
 variable "nodegroup_name" {
   description = "nodegroup name"
   type        = string

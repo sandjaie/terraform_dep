@@ -4,9 +4,10 @@ variable "environment" {
 }
 
 variable "cost_center" {
-  description = "cost_center name"
+  description = "Cost center to which the resource is tagged under"
   type        = string
 }
+
 variable "aws_keyname" {
   description = "Name of the keypair to use for the VM"
   type        = string
