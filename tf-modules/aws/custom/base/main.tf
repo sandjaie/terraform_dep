@@ -113,15 +113,15 @@ module "nat_gateway" {
   subnet_ids         = var.private_subnet_cidrs
 }
 
-resource "aws_route" "nat_gateway" {
-  depends_on = [
-    module.private_route_table,
-    module.nat_gateway
-  ]
-
-  count = length(var.availability_zones)
-
-  route_table_id         = module.private_route_table.rt_table_id
-  destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = element(module.nat_gateway.nat_gw_id, count.index)
-}
+#resource "aws_route" "nat_gateway" {
+#  depends_on = [
+#    module.private_route_table,
+#    module.nat_gateway
+#  ]
+#
+#  count = length(var.availability_zones)
+#
+#  route_table_id         = module.private_route_table.rt_table_id
+#  destination_cidr_block = "0.0.0.0/0"
+#  gateway_id             = element(module.nat_gateway.nat_gw_id, count.index)
+#}
