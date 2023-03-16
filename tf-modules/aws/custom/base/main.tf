@@ -112,14 +112,14 @@ module "nat_gateway" {
   cost_center = var.cost_center
   environment = var.environment
 }
-
-resource "aws_route" "nat_gateway" {
-  depends_on = [
-    module.private_route_table,
-    module.nat_gateway
-  ]
-
-  route_table_id         = module.private_route_table.rt_table_id
-  destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = element(module.nat_gateway.nat_gw_id, 1)
-}
+#
+#resource "aws_route" "nat_gateway" {
+#  depends_on = [
+#    module.private_route_table,
+#    module.nat_gateway
+#  ]
+#
+#  route_table_id         = module.private_route_table.rt_table_id
+#  destination_cidr_block = "0.0.0.0/0"
+#  gateway_id             = element(module.nat_gateway.nat_gw_id, 1)
+#}
