@@ -3,6 +3,7 @@
 .terragrunt-cache
 **/.terraform.lock.hcl
 .env
+**/.aws-auth*
 
 # IDE
 .idea/
