@@ -65,7 +65,7 @@ resource "aws_route_table_association" "public_subnets_association" {
     module.public_route_table
   ]
 
-  count          = length(var.availability_zones)
+  count          = length(var.public_subnet_cidrs)
   subnet_id      = element(module.public_subnets.subnet_ids, count.index)
   route_table_id = local.public_rt_id
 }
@@ -83,7 +83,7 @@ resource "aws_route_table_association" "private_subnets_association" {
     module.private_route_table,
   ]
 
-  count          = length(var.availability_zones)
+  count          = length(var.private_subnet_cidrs)
   subnet_id      = element(var.private_subnet_cidrs, count.index)
   route_table_id = module.private_route_table.rt_table_id
 }
