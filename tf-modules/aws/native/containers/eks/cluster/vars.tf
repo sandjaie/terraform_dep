@@ -1,13 +1,12 @@
 variable "environment" {
-  description = "environment that the vpv belongs too"
+  description = "Environment that the VPC belongs to"
   type        = string
 }
 
 variable "cost_center" {
-  description = "cost_center that the vpc belongs too"
+  description = "cost_center name"
   type        = string
 }
-
 variable "aws_keyname" {
   description = "Name of the keypair to use for the VM"
   type        = string

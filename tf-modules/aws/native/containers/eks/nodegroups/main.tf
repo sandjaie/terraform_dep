@@ -44,11 +44,11 @@ resource "aws_eks_node_group" "nodegroup" {
     version = "$Latest"
   }
 
-    depends_on = [
-      aws_iam_role_policy_attachment.eks_worker_node_policy,
-      aws_iam_role_policy_attachment.eks_cni_policy,
-      aws_iam_role_policy_attachment.container_registry_policy,
-    ]
+  depends_on = [
+    aws_iam_role_policy_attachment.eks_worker_node_policy,
+    aws_iam_role_policy_attachment.eks_cni_policy,
+    aws_iam_role_policy_attachment.container_registry_policy,
+  ]
 
   tags = merge(local.tags, {
     Name = var.nodegroup_name
