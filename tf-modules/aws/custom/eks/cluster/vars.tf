@@ -71,3 +71,14 @@ variable "kube_proxy_version" {
   type        = string
   default     = null
 }
+
+
+variable "private_subnet_ids" {
+  description = "List of private subnet ids."
+  type        = list(string)
+}
+
+variable "public_subnet_ids" {
+  description = "List of public subnet ids."
+  type        = list(string)
+}

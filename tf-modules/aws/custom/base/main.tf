@@ -9,7 +9,6 @@ module "vpc" {
   environment = var.environment
 }
 
-
 module "private_subnets" {
   source = "../../native/networking/subnet"
 
