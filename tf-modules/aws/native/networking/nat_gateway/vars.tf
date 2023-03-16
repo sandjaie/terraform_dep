@@ -32,3 +32,9 @@ variable "aws_region" {
   description = "AWS Region."
   type        = string
 }
+
+variable "connectivity_type" {
+  description = "Connectivity type for the gateway. Valid values are private and public"
+  type        = string
+  default     = "public"
+}

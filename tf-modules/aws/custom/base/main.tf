@@ -88,24 +88,29 @@ resource "aws_route_table_association" "private_subnets_association" {
   route_table_id = module.private_route_table.rt_table_id
 }
 
-resource "aws_eip" "nat_elastic_ip" {
-  vpc = true
+module "elastic_ips" {
+  source = "../../native/networking/elastic_ips"
 
-  tags = merge(local.tags, {
-    Name = "${var.environment}-elasticIP"
-  })
+  availability_zones = var.availability_zones
+  cost_center        = var.cost_center
+  environment        = var.environment
 }
 
 module "nat_gateway" {
   source = "../../native/networking/nat_gateway"
 
+  count = length(var.private_subnet_cidrs)
+  depends_on = [
+    module.elastic_ips
+  ]
+
   availability_zones = var.availability_zones
   aws_region         = var.aws_region
   cost_center        = var.cost_center
-  elastic_ip         = aws_eip.nat_elastic_ip.id
+  elastic_ip         = element(module.elastic_ips, count.index)
   environment        = var.environment
   groupprefix        = "private"
-  subnet_ids         = local.private_subnet_ids
+  subnet_ids         = element(var.private_subnet_cidrs, count.index)
 }
 
 resource "aws_route" "nat_gateway" {

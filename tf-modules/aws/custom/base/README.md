@@ -18,6 +18,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_elastic_ips"></a> [elastic\_ips](#module\_elastic\_ips) | ../../native/networking/elastic_ips | n/a |
 | <a name="module_internet_gateway"></a> [internet\_gateway](#module\_internet\_gateway) | ../../native/networking/internet_gateway | n/a |
 | <a name="module_nat_gateway"></a> [nat\_gateway](#module\_nat\_gateway) | ../../native/networking/nat_gateway | n/a |
 | <a name="module_private_route_table"></a> [private\_route\_table](#module\_private\_route\_table) | ../../../aws/native/networking/route_table | n/a |
@@ -30,7 +31,6 @@
 
 | Name | Type |
 |------|------|
-| [aws_eip.nat_elastic_ip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
 | [aws_route.internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
 | [aws_route.nat_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
 | [aws_route_table_association.private_subnets_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
