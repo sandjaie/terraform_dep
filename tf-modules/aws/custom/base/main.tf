@@ -107,10 +107,10 @@ module "nat_gateway" {
   availability_zones = var.availability_zones
   aws_region         = var.aws_region
   cost_center        = var.cost_center
-  elastic_ip         = element(module.elastic_ips.elastic_ips, count.index)
+  elastic_ips        = module.elastic_ips.elastic_ips
   environment        = var.environment
   groupprefix        = "private"
-  subnet_ids         = element(var.private_subnet_cidrs, count.index)
+  subnet_ids         = var.private_subnet_cidrs
 }
 
 resource "aws_route" "nat_gateway" {

@@ -1,11 +1,11 @@
 variable "subnet_ids" {
-  type        = list(string)
   description = "list of subnet ids"
+  type        = list(string)
 }
 
-variable "elastic_ip" {
-  description = "Elastic IP for the NAT gaeway"
-  type        = string
+variable "elastic_ips" {
+  description = "Elastic IPs for the NAT gaeway"
+  type        = list(string)
 }
 
 variable "groupprefix" {
