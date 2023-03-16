@@ -10,19 +10,31 @@
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.50.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_internet_gateway"></a> [internet\_gateway](#module\_internet\_gateway) | ../../native/networking/internet_gateway | n/a |
+| <a name="module_nat_gateway"></a> [nat\_gateway](#module\_nat\_gateway) | ../../native/networking/nat_gateway | n/a |
+| <a name="module_private_route_table"></a> [private\_route\_table](#module\_private\_route\_table) | ../../../aws/native/networking/route_table | n/a |
 | <a name="module_private_subnets"></a> [private\_subnets](#module\_private\_subnets) | ../../native/networking/subnet | n/a |
+| <a name="module_public_route_table"></a> [public\_route\_table](#module\_public\_route\_table) | ../../native/networking/route_table | n/a |
 | <a name="module_public_subnets"></a> [public\_subnets](#module\_public\_subnets) | ../../native/networking/subnet | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ../../native/networking/vpc | n/a |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_eip.nat_elastic_ip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
+| [aws_route.internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route.nat_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route_table_association.private_subnets_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
+| [aws_route_table_association.public_subnets_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 
 ## Inputs
 
