@@ -98,30 +98,29 @@ module "elastic_ips" {
 
 module "nat_gateway" {
   source = "../../native/networking/nat_gateway"
-
-  count = length(var.private_subnet_cidrs)
+  count  = length(var.private_subnet_cidrs)
   depends_on = [
     module.elastic_ips
   ]
 
-  availability_zones = var.availability_zones
-  aws_region         = var.aws_region
-  cost_center        = var.cost_center
-  elastic_ips        = module.elastic_ips.elastic_ips
-  environment        = var.environment
   groupprefix        = "private"
-  subnet_ids         = module.public_subnets.subnet_ids
+  availability_zones = var.availability_zones
+  elastic_ips        = module.elastic_ips.elastic_ips
+  subnet_ids         = module.private_subnets.subnet_ids
+
+  cost_center = var.cost_center
+  environment = var.environment
 }
 
-#resource "aws_route" "nat_gateway" {
-#  depends_on = [
-#    module.private_route_table,
-#    module.nat_gateway
-#  ]
-#
-#  count = length(var.availability_zones)
-#
-#  route_table_id         = module.private_route_table.rt_table_id
-#  destination_cidr_block = "0.0.0.0/0"
-#  gateway_id             = element(module.nat_gateway.nat_gw_id, count.index)
-#}
+resource "aws_route" "nat_gateway" {
+  depends_on = [
+    module.private_route_table,
+    module.nat_gateway
+  ]
+
+  count = length(var.availability_zones)
+
+  route_table_id         = module.private_route_table.rt_table_id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = element(module.nat_gateway.nat_gw_id, count.index)
+}

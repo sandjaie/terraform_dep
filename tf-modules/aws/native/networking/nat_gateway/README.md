@@ -29,7 +29,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_availability_zones"></a> [availability\_zones](#input\_availability\_zones) | List of availability\_zones of the region | `list(string)` | n/a | yes |
-| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS Region. | `string` | n/a | yes |
 | <a name="input_connectivity_type"></a> [connectivity\_type](#input\_connectivity\_type) | Connectivity type for the gateway. Valid values are private and public | `string` | `"public"` | no |
 | <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | Cost center to which the resource is tagged under | `string` | n/a | yes |
 | <a name="input_elastic_ips"></a> [elastic\_ips](#input\_elastic\_ips) | Elastic IPs for the NAT gaeway | `list(string)` | n/a | yes |
