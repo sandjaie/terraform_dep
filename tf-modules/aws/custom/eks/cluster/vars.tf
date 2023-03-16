@@ -82,3 +82,16 @@ variable "public_subnet_ids" {
   description = "List of public subnet ids."
   type        = list(string)
 }
+
+
+variable "endpoint_public_access" {
+  description = "Whether the Amazon EKS public API server endpoint is enabled."
+  type        = bool
+  default     = false
+}
+
+variable "endpoint_private_access" {
+  description = "Whether the Amazon EKS private API server endpoint is enabled."
+  type        = bool
+  default     = true
+}

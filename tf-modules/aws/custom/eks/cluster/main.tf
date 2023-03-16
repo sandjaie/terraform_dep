@@ -1,9 +1,11 @@
 module "eks" {
-  source        = "../../../native/containers/eks/cluster"
-  cluster_name  = local.cluster_name
-  eks_version   = var.eks_version
-  cluster_index = var.cluster_index
-  subnet_ids    = var.subnet_ids
+  source                  = "../../../native/containers/eks/cluster"
+  cluster_name            = local.cluster_name
+  eks_version             = var.eks_version
+  cluster_index           = var.cluster_index
+  subnet_ids              = var.subnet_ids
+  endpoint_private_access = var.endpoint_private_access
+  endpoint_public_access  = var.endpoint_public_access
 
   cni_addon_version  = var.cni_addon_version
   kube_proxy_version = var.kube_proxy_version

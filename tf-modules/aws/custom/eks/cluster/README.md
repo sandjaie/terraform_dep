@@ -33,6 +33,8 @@ No resources.
 | <a name="input_coredns_version"></a> [coredns\_version](#input\_coredns\_version) | coredns version - addon | `string` | `null` | no |
 | <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center that the vpc belongs too | `string` | n/a | yes |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | EKS version | `string` | n/a | yes |
+| <a name="input_endpoint_private_access"></a> [endpoint\_private\_access](#input\_endpoint\_private\_access) | Whether the Amazon EKS private API server endpoint is enabled. | `bool` | `true` | no |
+| <a name="input_endpoint_public_access"></a> [endpoint\_public\_access](#input\_endpoint\_public\_access) | Whether the Amazon EKS public API server endpoint is enabled. | `bool` | `false` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
 | <a name="input_kube_proxy_version"></a> [kube\_proxy\_version](#input\_kube\_proxy\_version) | kube\_proxy version - addon | `string` | `null` | no |
 | <a name="input_nodegroup"></a> [nodegroup](#input\_nodegroup) | Specifications of nodegroup | <pre>object({<br>    min_size         = number<br>    max_size         = number<br>    desired_size     = number<br>    root_volume_size = number<br>    instance_type    = string<br>  })</pre> | <pre>{<br>  "desired_size": 1,<br>  "instance_type": "m5.large",<br>  "max_size": 1,<br>  "min_size": 1,<br>  "root_volume_size": 20<br>}</pre> | no |
