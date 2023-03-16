@@ -12,10 +12,12 @@ dependency "base" {
 
 inputs = {
   #cluster_name      = "tenant-01-dev-1"
-  subnet_ids        = dependency.base.outputs.subnet_ids
-  eks_version       = "1.23"
-  cni_addon_version = "v1.12.5-eksbuild.2"
+  subnet_ids              = dependency.base.outputs.private_subnet_ids
+  eks_version             = "1.23"
+  cni_addon_version       = "v1.12.5-eksbuild.2"
   #kube_proxy_version = "v1.23.16-eksbuild.2"
   #coredns_version    = "v1.8.7-eksbuild.4"
-  nodegroup_name    = "app-1"
+  nodegroup_name          = "app-1"
+  endpoint_private_access = false
+  endpoint_public_access  = true
 }
