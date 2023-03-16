@@ -9,7 +9,7 @@ variable "prefix" {
 }
 
 variable "environment" {
-  description = "Deployment environment. E.g. TPROD, APROD, CPROD"
+  description = "Deployment environment."
   type        = string
 }
 

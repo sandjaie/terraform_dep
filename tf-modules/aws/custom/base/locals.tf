@@ -6,7 +6,7 @@ locals {
   private_route_table_id = module.private_route_table.rt_table_id
   igw_id                 = module.internet_gateway.igw_id
   elastic_ips            = module.elastic_ips.elastic_ips
-  nat_gw_id              = element(module.nat_gateway.nat_gw_id, 0)
+  nat_gw_id              = module.nat_gateway.nat_gw_id
 }
 
 locals {

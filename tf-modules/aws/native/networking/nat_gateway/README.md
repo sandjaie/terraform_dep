@@ -40,7 +40,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_nat_gw_id"></a> [nat\_gw\_id](#output\_nat\_gw\_id) | n/a |
-| <a name="output_nat_gw_ids"></a> [nat\_gw\_ids](#output\_nat\_gw\_ids) | n/a |
 | <a name="output_nat_gw_network_interface_id"></a> [nat\_gw\_network\_interface\_id](#output\_nat\_gw\_network\_interface\_id) | n/a |
 | <a name="output_nat_gw_private_ip"></a> [nat\_gw\_private\_ip](#output\_nat\_gw\_private\_ip) | n/a |
 | <a name="output_nat_gw_public_ip"></a> [nat\_gw\_public\_ip](#output\_nat\_gw\_public\_ip) | n/a |
