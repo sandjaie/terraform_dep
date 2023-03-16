@@ -103,7 +103,7 @@ module "nat_gateway" {
   ]
 
   groupprefix = "private"
-  elastic_ip  = local.elastic_ips
+  elastic_ip  = element(local.elastic_ips, 0)
   subnet_id   = element(local.public_subnet_ids, 0)
 
   cost_center = var.cost_center
