@@ -18,6 +18,6 @@ inputs = {
   #kube_proxy_version = "v1.23.16-eksbuild.2"
   #coredns_version    = "v1.8.7-eksbuild.4"
   nodegroup_name          = "app-1"
-  endpoint_private_access = false
-  endpoint_public_access  = true
+  endpoint_private_access = true
+  endpoint_public_access  = false
 }

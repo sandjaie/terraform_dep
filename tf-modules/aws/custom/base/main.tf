@@ -102,11 +102,9 @@ module "nat_gateway" {
     module.elastic_ips
   ]
 
-  groupprefix        = "private"
-  number_of_natgws   = 1
-  availability_zones = var.availability_zones
-  elastic_ips        = local.elastic_ips
-  subnet_ids         = local.private_subnet_ids
+  groupprefix = "private"
+  elastic_ip  = local.elastic_ips
+  subnet_id   = element(local.public_subnet_ids, 0)
 
   cost_center = var.cost_center
   environment = var.environment

@@ -18,6 +18,8 @@ module "eks" {
 module "node_group" {
   source = "../../../native/containers/eks/nodegroups"
 
+  depends_on = [module.eks]
+
   min_size         = var.nodegroup.min_size
   max_size         = var.nodegroup.max_size
   desired_size     = var.nodegroup.desired_size
