@@ -98,7 +98,6 @@ module "elastic_ips" {
 
 module "nat_gateway" {
   source = "../../native/networking/nat_gateway"
-  count  = length(var.private_subnet_cidrs)
   depends_on = [
     module.elastic_ips
   ]
