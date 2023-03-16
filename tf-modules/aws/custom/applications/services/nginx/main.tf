@@ -3,7 +3,6 @@ module "namespace" {
 
   namespace_name   = "services"
   eks_cluster_name = var.eks_cluster_name
-  oidc_id          = var.eks_oidc_id
 }
 
 resource "kubernetes_deployment" "nginx" {
