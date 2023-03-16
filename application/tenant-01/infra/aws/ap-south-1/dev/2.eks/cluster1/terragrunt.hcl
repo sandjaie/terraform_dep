@@ -20,4 +20,12 @@ inputs = {
   nodegroup_name          = "app1"
   endpoint_private_access = true
   endpoint_public_access  = true
+
+  nodegroup = {
+    min_size         = 1
+    max_size         = 2
+    desired_size     = 1
+    root_volume_size = 8
+    instance_type    = "t3.small"
+  }
 }
