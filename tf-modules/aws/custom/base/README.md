@@ -32,7 +32,6 @@
 | Name | Type |
 |------|------|
 | [aws_route.internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
-| [aws_route.nat_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
 | [aws_route_table_association.private_subnets_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 | [aws_route_table_association.public_subnets_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 
@@ -53,8 +52,23 @@
 
 | Name | Description |
 |------|-------------|
+| <a name="output_elastic_ips"></a> [elastic\_ips](#output\_elastic\_ips) | n/a |
+| <a name="output_internet_gateway_id"></a> [internet\_gateway\_id](#output\_internet\_gateway\_id) | n/a |
+| <a name="output_internet_gateway_name"></a> [internet\_gateway\_name](#output\_internet\_gateway\_name) | n/a |
+| <a name="output_internet_gateway_route_id"></a> [internet\_gateway\_route\_id](#output\_internet\_gateway\_route\_id) | n/a |
+| <a name="output_internet_gateway_route_table_id"></a> [internet\_gateway\_route\_table\_id](#output\_internet\_gateway\_route\_table\_id) | n/a |
+| <a name="output_nat_gw_ids"></a> [nat\_gw\_ids](#output\_nat\_gw\_ids) | n/a |
+| <a name="output_nat_gw_network_interface_ids"></a> [nat\_gw\_network\_interface\_ids](#output\_nat\_gw\_network\_interface\_ids) | n/a |
+| <a name="output_nat_gw_private_ips"></a> [nat\_gw\_private\_ips](#output\_nat\_gw\_private\_ips) | n/a |
+| <a name="output_nat_gw_public_ips"></a> [nat\_gw\_public\_ips](#output\_nat\_gw\_public\_ips) | n/a |
+| <a name="output_nat_gw_subnet_ids"></a> [nat\_gw\_subnet\_ids](#output\_nat\_gw\_subnet\_ids) | n/a |
+| <a name="output_private_route_table_id"></a> [private\_route\_table\_id](#output\_private\_route\_table\_id) | n/a |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | n/a |
+| <a name="output_public_route_table_id"></a> [public\_route\_table\_id](#output\_public\_route\_table\_id) | n/a |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | n/a |
 | <a name="output_routing_table_id"></a> [routing\_table\_id](#output\_routing\_table\_id) | n/a |
+| <a name="output_vpc_default_network_acl_id"></a> [vpc\_default\_network\_acl\_id](#output\_vpc\_default\_network\_acl\_id) | n/a |
+| <a name="output_vpc_default_route_table_id"></a> [vpc\_default\_route\_table\_id](#output\_vpc\_default\_route\_table\_id) | n/a |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | n/a |
+| <a name="output_vpc_name"></a> [vpc\_name](#output\_vpc\_name) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
