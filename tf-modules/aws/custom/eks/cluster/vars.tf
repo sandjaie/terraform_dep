@@ -72,18 +72,6 @@ variable "kube_proxy_version" {
   default     = null
 }
 
-
-variable "private_subnet_ids" {
-  description = "List of private subnet ids."
-  type        = list(string)
-}
-
-variable "public_subnet_ids" {
-  description = "List of public subnet ids."
-  type        = list(string)
-}
-
-
 variable "endpoint_public_access" {
   description = "Whether the Amazon EKS public API server endpoint is enabled."
   type        = bool
