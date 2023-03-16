@@ -36,10 +36,8 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | Name of the eks cluster | `string` | n/a | yes |
-| <a name="input_eks_oidc_id"></a> [eks\_oidc\_id](#input\_eks\_oidc\_id) | OpenID Connect ID of the eks cluster. Available from 'OpenID Connect provider URL' | `string` | n/a | yes |
 | <a name="input_namespace_name"></a> [namespace\_name](#input\_namespace\_name) | Name of the namespace to be created | `string` | n/a | yes |
 | <a name="input_nginx_replicas_count"></a> [nginx\_replicas\_count](#input\_nginx\_replicas\_count) | Number of nginx replicas | `number` | `2` | no |
-| <a name="input_oidc_id"></a> [oidc\_id](#input\_oidc\_id) | OpenID Connect ID of the eks cluster. Available from 'OpenID Connect provider URL' | `string` | n/a | yes |
 
 ## Outputs
 

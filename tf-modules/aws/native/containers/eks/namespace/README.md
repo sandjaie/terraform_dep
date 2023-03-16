@@ -34,7 +34,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | Name of the eks cluster | `string` | n/a | yes |
 | <a name="input_namespace_name"></a> [namespace\_name](#input\_namespace\_name) | Name of the namespace to be created | `string` | n/a | yes |
-| <a name="input_oidc_id"></a> [oidc\_id](#input\_oidc\_id) | OpenID Connect ID of the eks cluster. Available from 'OpenID Connect provider URL' | `string` | n/a | yes |
 
 ## Outputs
 
