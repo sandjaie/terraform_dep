@@ -5,7 +5,7 @@
 
 variable "subnet_id" {
   description = "Subnet ID where the NAT needs to be created"
-  type        = list(string)
+  type        = string
 }
 
 #variable "elastic_ips" {

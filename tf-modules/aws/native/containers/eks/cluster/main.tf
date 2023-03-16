@@ -30,22 +30,6 @@ resource "aws_eks_cluster" "eks_cluster" {
   tags = local.tags
 }
 
-
-resource "aws_iam_role" "eks_cluster_role" {
-  name               = var.cluster_name
-  assume_role_policy = data.aws_iam_policy_document.eks_policy_document.json
-}
-
-resource "aws_iam_role_policy_attachment" "eks_cluster_policy" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  role       = aws_iam_role.eks_cluster_role.name
-}
-
-resource "aws_iam_role_policy_attachment" "eks_service_policy" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
-  role       = aws_iam_role.eks_cluster_role.name
-}
-
 resource "aws_cloudwatch_log_group" "example" {
   count = var.enable_cluster_cw_logs ? 1 : 0
 

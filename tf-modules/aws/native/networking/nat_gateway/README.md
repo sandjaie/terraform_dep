@@ -33,7 +33,7 @@ No modules.
 | <a name="input_elastic_ip"></a> [elastic\_ip](#input\_elastic\_ip) | Elastic IP for the NAT gaeway | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Deployment environment. | `string` | n/a | yes |
 | <a name="input_groupprefix"></a> [groupprefix](#input\_groupprefix) | Prefix added to the name of the nat. e.g Public or Private | `string` | n/a | yes |
-| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Subnet ID where the NAT needs to be created | `list(string)` | n/a | yes |
+| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Subnet ID where the NAT needs to be created | `string` | n/a | yes |
 
 ## Outputs
 
