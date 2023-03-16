@@ -84,7 +84,7 @@ resource "aws_route_table_association" "private_subnets_association" {
   ]
 
   count          = length(var.private_subnet_cidrs)
-  subnet_id      = element(var.private_subnet_cidrs, count.index)
+  subnet_id      = element(module.private_subnets.subnet_ids, count.index)
   route_table_id = module.private_route_table.rt_table_id
 }
 
@@ -110,7 +110,7 @@ module "nat_gateway" {
   elastic_ips        = module.elastic_ips.elastic_ips
   environment        = var.environment
   groupprefix        = "private"
-  subnet_ids         = var.private_subnet_cidrs
+  subnet_ids         = module.public_subnets.subnet_ids
 }
 
 #resource "aws_route" "nat_gateway" {
