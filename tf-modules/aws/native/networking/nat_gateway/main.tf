@@ -6,6 +6,6 @@ resource "aws_nat_gateway" "nat_gw" {
   connectivity_type = var.connectivity_type
 
   tags = merge(local.tags, {
-    Name = "${var.environment}-${var.groupprefix}-${element(var.availability_zones, count.index)}nat"
+    Name = "${var.environment}-${var.groupprefix}-${element(var.availability_zones, count.index)}-nat"
   })
 }
