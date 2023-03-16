@@ -118,9 +118,7 @@ resource "aws_route" "nat_gateway" {
     module.nat_gateway
   ]
 
-  count = length(var.availability_zones)
-
   route_table_id         = module.private_route_table.rt_table_id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = element(module.nat_gateway.nat_gw_id, count.index)
+  gateway_id             = element(module.nat_gateway.nat_gw_id, 1)
 }
