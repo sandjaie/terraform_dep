@@ -27,11 +27,11 @@ output "vpc_default_route_table_id" {
 }
 
 output "elastic_ips" {
-  value = module.elastic_ips.elastic_ips
+  value = local.elastic_ips
 }
 
 output "internet_gateway_id" {
-  value = module.internet_gateway.igw_id
+  value = local.nat_gw_id
 }
 
 output "internet_gateway_name" {
@@ -39,7 +39,7 @@ output "internet_gateway_name" {
 }
 
 output "nat_gw_ids" {
-  value = module.nat_gateway.nat_gw_id
+  value = local.nat_gw_id
 }
 
 output "nat_gw_private_ips" {
@@ -59,11 +59,11 @@ output "nat_gw_network_interface_ids" {
 }
 
 output "public_route_table_id" {
-  value = module.public_route_table.rt_table_id
+  value = local.public_route_table_id
 }
 
 output "private_route_table_id" {
-  value = module.private_route_table.rt_table_id
+  value = local.private_route_table_id
 }
 
 output "internet_gateway_route_table_id" {
@@ -74,10 +74,10 @@ output "internet_gateway_route_id" {
   value = aws_route.internet_gateway.*.id
 }
 
-#output "nat_gateway_route_table_ids" {
-#  value = aws_route.nat_gateway.*.route_table_id
-#}
-#
-#output "nat_gateway_route_ids" {
-#  value = aws_route.nat_gateway.*.id
-#}
+output "nat_gateway_route_table_ids" {
+  value = aws_route.nat_gateway.*.route_table_id
+}
+
+output "nat_gateway_route_ids" {
+  value = aws_route.nat_gateway.*.id
+}

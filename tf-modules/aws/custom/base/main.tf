@@ -54,9 +54,9 @@ resource "aws_route" "internet_gateway" {
     module.internet_gateway
   ]
 
-  route_table_id         = local.public_rt_id
+  route_table_id         = local.public_route_table_id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = module.internet_gateway.igw_id
+  gateway_id             = local.igw_id
 }
 
 resource "aws_route_table_association" "public_subnets_association" {
@@ -66,8 +66,8 @@ resource "aws_route_table_association" "public_subnets_association" {
   ]
 
   count          = length(var.public_subnet_cidrs)
-  subnet_id      = element(module.public_subnets.subnet_ids, count.index)
-  route_table_id = local.public_rt_id
+  subnet_id      = element(local.public_subnet_ids, count.index)
+  route_table_id = local.public_route_table_id
 }
 
 module "private_route_table" {
@@ -84,8 +84,8 @@ resource "aws_route_table_association" "private_subnets_association" {
   ]
 
   count          = length(var.private_subnet_cidrs)
-  subnet_id      = element(module.private_subnets.subnet_ids, count.index)
-  route_table_id = module.private_route_table.rt_table_id
+  subnet_id      = element(local.private_subnet_ids, count.index)
+  route_table_id = local.private_route_table_id
 }
 
 module "elastic_ips" {
@@ -105,20 +105,20 @@ module "nat_gateway" {
   groupprefix        = "private"
   number_of_natgws   = 1
   availability_zones = var.availability_zones
-  elastic_ips        = module.elastic_ips.elastic_ips
-  subnet_ids         = module.private_subnets.subnet_ids
+  elastic_ips        = local.elastic_ips
+  subnet_ids         = local.private_subnet_ids
 
   cost_center = var.cost_center
   environment = var.environment
 }
 
-#resource "aws_route" "nat_gateway" {
-#  depends_on = [
-#    module.private_route_table,
-#    module.nat_gateway
-#  ]
-#
-#  route_table_id         = module.private_route_table.rt_table_id
-#  destination_cidr_block = "0.0.0.0/0"
-#  gateway_id             = module.nat_gateway.nat_gw_id
-#}
+resource "aws_route" "nat_gateway" {
+  depends_on = [
+    module.private_route_table,
+    module.nat_gateway
+  ]
+
+  route_table_id         = local.private_route_table_id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = local.nat_gw_id
+}
