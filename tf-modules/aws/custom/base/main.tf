@@ -16,7 +16,7 @@ module "private_subnets" {
   availability_zones = var.availability_zones
   cidr_blocks        = var.private_subnet_cidrs
   subnet_type        = "private"
-  vpc_id             = module.vpc.vpc_id
+  vpc_id             = local.vpc_id
   cost_center        = var.cost_center
   environment        = var.environment
 }
@@ -27,7 +27,7 @@ module "public_subnets" {
   availability_zones = var.availability_zones
   cidr_blocks        = var.public_subnet_cidrs
   subnet_type        = "public"
-  vpc_id             = module.vpc.vpc_id
+  vpc_id             = local.vpc_id
   cost_center        = var.cost_center
   environment        = var.environment
 }
