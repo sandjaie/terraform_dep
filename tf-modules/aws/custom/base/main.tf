@@ -9,12 +9,24 @@ module "vpc" {
   environment = var.environment
 }
 
-module "subnet" {
+
+module "private_subnets" {
   source = "../../native/networking/subnet"
 
   availability_zones = var.availability_zones
-  cidr_blocks        = var.subnet_cidrs
-  subnet_type        = var.subnet_type
+  cidr_blocks        = var.private_subnet_cidrs
+  subnet_type        = "private"
+  vpc_id             = module.vpc.vpc_id
+  cost_center        = var.cost_center
+  environment        = var.environment
+}
+
+module "public_subnets" {
+  source = "../../native/networking/subnet"
+
+  availability_zones = var.availability_zones
+  cidr_blocks        = var.public_subnet_cidrs
+  subnet_type        = "public"
   vpc_id             = module.vpc.vpc_id
   cost_center        = var.cost_center
   environment        = var.environment

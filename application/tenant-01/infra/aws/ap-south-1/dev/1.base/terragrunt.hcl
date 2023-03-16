@@ -7,8 +7,8 @@ include "root" {
 }
 
 inputs = {
-  vpc_name     = "tenant-01-dev"
-  vpc_cidr     = "10.100.0.0/22"
-  subnet_cidrs = ["10.100.0.0/24", "10.100.1.0/24", "10.100.2.0/24"]
-  subnet_type  = "public"
+  vpc_name             = "tenant-01-dev"
+  vpc_cidr             = "10.100.0.0/22"
+  public_subnet_cidrs  = ["10.100.0.0/24", "10.100.1.0/25", "10.100.1.128/25"]
+  private_subnet_cidrs = ["10.100.2.0/24", "10.100.3.0/25", "10.100.3.128/25"]
 }

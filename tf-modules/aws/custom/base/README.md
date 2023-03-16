@@ -16,7 +16,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_subnet"></a> [subnet](#module\_subnet) | ../../native/networking/subnet | n/a |
+| <a name="module_private_subnets"></a> [private\_subnets](#module\_private\_subnets) | ../../native/networking/subnet | n/a |
+| <a name="module_public_subnets"></a> [public\_subnets](#module\_public\_subnets) | ../../native/networking/subnet | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ../../native/networking/vpc | n/a |
 
 ## Resources
@@ -31,7 +32,8 @@ No resources.
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region i.e us-west-2, us-east-1 | `string` | n/a | yes |
 | <a name="input_cost_center"></a> [cost\_center](#input\_cost\_center) | cost\_center that the vpc belongs too | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
-| <a name="input_subnet_cidrs"></a> [subnet\_cidrs](#input\_subnet\_cidrs) | The IPv4 CIDR block for the subnet. | `list(string)` | n/a | yes |
+| <a name="input_private_subnet_cidrs"></a> [private\_subnet\_cidrs](#input\_private\_subnet\_cidrs) | The IPv4 CIDR block for the private subnets. | `list(string)` | n/a | yes |
+| <a name="input_public_subnet_cidrs"></a> [public\_subnet\_cidrs](#input\_public\_subnet\_cidrs) | The IPv4 CIDR block for the public subnets. | `list(string)` | n/a | yes |
 | <a name="input_subnet_type"></a> [subnet\_type](#input\_subnet\_type) | Tag to identßitify the subnet purpose. E.g Private, Public | `string` | n/a | yes |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using ipv4\_netmask\_length | `string` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | Name of the vpc. If left null, the environment name will be the vpc name | `string` | `null` | no |
