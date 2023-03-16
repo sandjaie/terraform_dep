@@ -34,7 +34,6 @@ No resources.
 | <a name="input_environment"></a> [environment](#input\_environment) | environment that the vpv belongs too | `string` | n/a | yes |
 | <a name="input_private_subnet_cidrs"></a> [private\_subnet\_cidrs](#input\_private\_subnet\_cidrs) | The IPv4 CIDR block for the private subnets. | `list(string)` | n/a | yes |
 | <a name="input_public_subnet_cidrs"></a> [public\_subnet\_cidrs](#input\_public\_subnet\_cidrs) | The IPv4 CIDR block for the public subnets. | `list(string)` | n/a | yes |
-| <a name="input_subnet_type"></a> [subnet\_type](#input\_subnet\_type) | Tag to identßitify the subnet purpose. E.g Private, Public | `string` | n/a | yes |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using ipv4\_netmask\_length | `string` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | Name of the vpc. If left null, the environment name will be the vpc name | `string` | `null` | no |
 

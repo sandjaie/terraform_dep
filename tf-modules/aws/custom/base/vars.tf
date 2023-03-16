@@ -33,11 +33,6 @@ variable "availability_zones" {
   type        = list(string)
 }
 
-variable "subnet_type" {
-  description = "Tag to identßitify the subnet purpose. E.g Private, Public"
-  type        = string
-}
-
 variable "vpc_name" {
   description = "Name of the vpc. If left null, the environment name will be the vpc name"
   type        = string

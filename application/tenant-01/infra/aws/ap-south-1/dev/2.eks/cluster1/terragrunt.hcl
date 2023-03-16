@@ -11,7 +11,7 @@ dependency "base" {
 }
 
 inputs = {
-  cluster_name      = "tenant-01-dev-2"
+  #cluster_name      = "tenant-01-dev-1"
   subnet_ids        = dependency.base.outputs.subnet_ids
   eks_version       = "1.23"
   cni_addon_version = "v1.12.5-eksbuild.2"
