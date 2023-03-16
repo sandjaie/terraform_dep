@@ -91,9 +91,9 @@ resource "aws_route_table_association" "private_subnets_association" {
 module "elastic_ips" {
   source = "../../native/networking/elastic_ips"
 
-  availability_zones = var.availability_zones
-  cost_center        = var.cost_center
-  environment        = var.environment
+  number_of_ips = 1
+  cost_center   = var.cost_center
+  environment   = var.environment
 }
 
 module "nat_gateway" {
@@ -104,6 +104,7 @@ module "nat_gateway" {
   ]
 
   groupprefix        = "private"
+  number_of_natgws   = 1
   availability_zones = var.availability_zones
   elastic_ips        = module.elastic_ips.elastic_ips
   subnet_ids         = module.private_subnets.subnet_ids

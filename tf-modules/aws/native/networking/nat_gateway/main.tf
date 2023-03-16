@@ -1,5 +1,5 @@
 resource "aws_nat_gateway" "nat_gw" {
-  count = length(var.availability_zones)
+  count = var.number_of_natgws
 
   allocation_id     = element(var.elastic_ips, count.index)
   subnet_id         = element(var.subnet_ids, count.index)

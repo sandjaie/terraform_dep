@@ -8,7 +8,7 @@ variable "cost_center" {
   type        = string
 }
 
-variable "availability_zones" {
-  description = "AZs of the region"
-  type        = list(string)
+variable "number_of_ips" {
+  description = "Number of elastic ips needed"
+  type        = number
 }

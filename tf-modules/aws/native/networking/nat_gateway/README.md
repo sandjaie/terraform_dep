@@ -34,6 +34,7 @@ No modules.
 | <a name="input_elastic_ips"></a> [elastic\_ips](#input\_elastic\_ips) | Elastic IPs for the NAT gaeway | `list(string)` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Deployment environment. | `string` | n/a | yes |
 | <a name="input_groupprefix"></a> [groupprefix](#input\_groupprefix) | Prefix added to the name of the nat. e.g Public or Private | `string` | n/a | yes |
+| <a name="input_number_of_natgws"></a> [number\_of\_natgws](#input\_number\_of\_natgws) | Number of NAT gateways needed | `number` | n/a | yes |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | list of subnet ids | `list(string)` | n/a | yes |
 
 ## Outputs

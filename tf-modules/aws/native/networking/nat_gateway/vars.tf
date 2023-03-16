@@ -34,3 +34,8 @@ variable "connectivity_type" {
   type        = string
   default     = "public"
 }
+
+variable "number_of_natgws" {
+  description = "Number of NAT gateways needed"
+  type        = number
+}

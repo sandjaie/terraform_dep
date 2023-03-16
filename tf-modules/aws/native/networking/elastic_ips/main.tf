@@ -1,5 +1,5 @@
 resource "aws_eip" "nat-eip" {
-  count = length(var.availability_zones)
+  count = var.number_of_ips
   vpc   = true
 
   tags = merge(local.tags, {
