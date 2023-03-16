@@ -1,4 +1,4 @@
-resource "aws_eip" "nat-eip" {
+resource "aws_eip" "eip" {
   count = var.number_of_ips
   vpc   = true
 
