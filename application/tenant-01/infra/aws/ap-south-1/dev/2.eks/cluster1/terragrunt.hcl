@@ -25,7 +25,7 @@ inputs = {
   nodegroup = {
     min_size         = 1
     max_size         = 3
-    desired_size     = 2
+    desired_size     = 1
     root_volume_size = 8
     instance_type    = "t3.medium"
   }
