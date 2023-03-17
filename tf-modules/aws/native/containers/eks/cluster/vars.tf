@@ -83,3 +83,9 @@ variable "endpoint_private_access" {
   type        = bool
   default     = false
 }
+
+variable "ebs_csi_driver_version" {
+  description = "ebs_csi_driver_version - addon"
+  type        = string
+  default     = null
+}

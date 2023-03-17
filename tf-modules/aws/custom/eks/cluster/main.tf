@@ -7,9 +7,10 @@ module "eks" {
   endpoint_private_access = var.endpoint_private_access
   endpoint_public_access  = var.endpoint_public_access
 
-  cni_addon_version  = var.cni_addon_version
-  kube_proxy_version = var.kube_proxy_version
-  coredns_version    = var.coredns_version
+  cni_addon_version      = var.cni_addon_version
+  kube_proxy_version     = var.kube_proxy_version
+  coredns_version        = var.coredns_version
+  ebs_csi_driver_version = var.ebs_csi_driver_version
 
   environment = var.environment
   cost_center = var.cost_center
