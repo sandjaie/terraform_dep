@@ -45,10 +45,11 @@ resource "kubernetes_service" "nginx" {
     selector = {
       app = "nginx-deployment"
     }
-    type = "LoadBalancer"
+    type = "NodePort"
     port {
-      port        = 80
-      target_port = 80
+      port      = 80
+      node_port = 30080
+      name      = "http"
     }
   }
 }
