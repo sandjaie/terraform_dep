@@ -13,8 +13,6 @@ variable "availability_zones" {
   type        = list(string)
 }
 
-
-# tags
 variable "environment" {
   description = "Deployment environment."
   type        = string

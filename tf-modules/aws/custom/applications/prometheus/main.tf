@@ -17,11 +17,6 @@ resource "helm_release" "grafana" {
   version    = var.helm_chart_grafana_version
   namespace  = var.namespace_name
 
-  #  set {
-  #    name  = "adminPassword"
-  #    value = "admin"
-  #  }
-
   values = [
     file("${path.module}/files/grafana.yaml"),
     yamlencode(var.settings_grafana)

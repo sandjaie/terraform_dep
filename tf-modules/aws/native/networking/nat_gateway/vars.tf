@@ -3,21 +3,25 @@
 #  type        = list(string)
 #}
 
-variable "subnet_id" {
-  description = "Subnet ID where the NAT needs to be created"
-  type        = string
-}
-
 #variable "elastic_ips" {
 #  description = "Elastic IPs for the NAT gaeway"
 #  type        = list(string)
 #}
 
+#variable "availability_zones" {
+#  description = "List of availability_zones of the region"
+#  type        = list(string)
+#}
+
+variable "subnet_id" {
+  description = "Subnet ID where the NAT needs to be created"
+  type        = string
+}
+
 variable "elastic_ip" {
   description = "Elastic IP for the NAT gaeway"
   type        = string
 }
-
 
 variable "groupprefix" {
   description = "Prefix added to the name of the nat. e.g Public or Private"
@@ -34,18 +38,8 @@ variable "cost_center" {
   type        = string
 }
 
-#variable "availability_zones" {
-#  description = "List of availability_zones of the region"
-#  type        = list(string)
-#}
-
 variable "connectivity_type" {
   description = "Connectivity type for the gateway. Valid values are private and public"
   type        = string
   default     = "public"
 }
-
-#variable "number_of_natgws" {
-#  description = "Number of NAT gateways needed"
-#  type        = number
-#}

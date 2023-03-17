@@ -8,7 +8,6 @@ variable "cost_center" {
   type        = string
 }
 
-
 variable "aws_region" {
   description = "AWS region i.e us-west-2, us-east-1"
   type        = string

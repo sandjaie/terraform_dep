@@ -1,5 +1,7 @@
 # base
 
+### This module creates the networking components. VPC, subnets, IGW, elastic-ips, NAT gateways. Adds the necessary routes.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
