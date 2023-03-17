@@ -37,6 +37,7 @@ resource "kubernetes_deployment" "nginx" {
 }
 
 resource "kubernetes_service" "nginx" {
+  count = var.enable_loadbalancer ? 0 : 1
   metadata {
     name      = "nginx"
     namespace = module.namespace.namespace_name
@@ -49,6 +50,25 @@ resource "kubernetes_service" "nginx" {
     port {
       port      = 80
       node_port = 30080
+      name      = "http"
+    }
+  }
+}
+
+resource "kubernetes_service" "nginx" {
+  count = var.enable_loadbalancer ? 1 : 0
+  metadata {
+    name      = "nginx"
+    namespace = module.namespace.namespace_name
+  }
+  spec {
+    selector = {
+      app = "nginx-deployment"
+    }
+    type = "NodePort"
+    port {
+      port      = 80
+      node_port = 80
       name      = "http"
     }
   }

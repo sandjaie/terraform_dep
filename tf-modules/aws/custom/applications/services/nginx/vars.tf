@@ -1,23 +1,3 @@
-#variable "cost_center" {
-#  description = "Cost center"
-#  type        = string
-#}
-#
-#variable "account_id" {
-#  description = "Account ID"
-#  type        = string
-#}
-#
-#variable "environment" {
-#  description = "Deployment environment."
-#  type        = string
-#}
-#
-#variable "aws_region" {
-#  description = "AWS Region."
-#  type        = string
-#}
-
 variable "eks_cluster_name" {
   description = "Name of the eks cluster"
   type        = string
@@ -32,4 +12,10 @@ variable "nginx_replicas_count" {
   description = "Number of nginx replicas"
   type        = number
   default     = 2
+}
+
+variable "enable_loadbalancer" {
+  description = "Boolean to set if the service needs loadbalancer. Else uses NodePort"
+  type        = bool
+  default     = false
 }
