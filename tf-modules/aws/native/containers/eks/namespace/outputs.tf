@@ -1,3 +1,9 @@
-#output "namespace_name" {
-#  value = kubernetes_namespace.services.*.metadata.name
-#}
+locals {
+  namespaces = flatten([
+    kubernetes_namespace.services[*].metadata.name
+  ])
+}
+
+output "namespaces" {
+  value = local.namespaces
+}
