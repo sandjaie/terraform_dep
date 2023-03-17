@@ -18,8 +18,8 @@ resource "kubernetes_deployment" "prometheus" {
       }
       spec {
         container {
-          name  = "prom/prometheus"
-          image = "prometheus"
+          name  = "prometheus"
+          image = "prom/prometheus"
           port {
             container_port = 9090
           }
