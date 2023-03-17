@@ -7,6 +7,10 @@ resource "kubernetes_manifest" "deployment" {
 }
 
 resource "kubernetes_manifest" "pvc" {
+  manifest = yamldecode(file("${path.module}/files/pv.yaml"))
+}
+
+resource "kubernetes_manifest" "pvc" {
   manifest = yamldecode(file("${path.module}/files/pvc.yaml"))
 }
 
