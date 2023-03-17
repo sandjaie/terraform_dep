@@ -1,5 +1,6 @@
 resource "kubernetes_namespace" "services" {
+  count = length(var.namespace_list)
   metadata {
-    name = var.namespace_name
+    name = element(var.namespace_list, count.index)
   }
 }

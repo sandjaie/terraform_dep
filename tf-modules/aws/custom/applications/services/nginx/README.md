@@ -18,9 +18,7 @@
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_namespace"></a> [namespace](#module\_namespace) | ../../../../native/containers/eks/namespace | n/a |
+No modules.
 
 ## Resources
 

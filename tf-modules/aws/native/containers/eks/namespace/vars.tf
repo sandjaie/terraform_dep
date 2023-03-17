@@ -1,29 +1,9 @@
-#variable "cost_center" {
-#  description = "Cost center"
-#  type        = string
-#}
-#
-##variable "account_id" {
-##  description = "Account ID"
-##  type        = string
-##}
-#
-#variable "environment" {
-#  description = "Deployment environment."
-#  type        = string
-#}
-#
-#variable "aws_region" {
-#  description = "AWS Region."
+#variable "eks_cluster_name" {
+#  description = "Name of the eks cluster"
 #  type        = string
 #}
 
-variable "eks_cluster_name" {
-  description = "Name of the eks cluster"
-  type        = string
-}
-
-variable "namespace_name" {
-  description = "Name of the namespace to be created"
-  type        = string
+variable "namespace_list" {
+  description = "List of namespaces to be created"
+  type        = list(string)
 }

@@ -1,11 +1,3 @@
-module "namespace" {
-  count  = var.create_namespace ? 1 : 0
-  source = "../../../../native/containers/eks/namespace"
-
-  namespace_name   = var.namespace_name
-  eks_cluster_name = var.eks_cluster_name
-}
-
 resource "kubernetes_deployment" "nginx" {
   metadata {
     name      = "nginx"
