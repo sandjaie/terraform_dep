@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/applications/services/nginx?ref=main"
+  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/applications/nginx?ref=main"
 }
 
 include "root" {

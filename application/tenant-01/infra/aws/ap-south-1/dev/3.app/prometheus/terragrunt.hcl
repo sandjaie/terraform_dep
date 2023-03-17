@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/applications/services/prometheus?ref=main"
+  source = "git::https://github.com/sandjaie/terraform_dep.git//tf-modules/aws/custom/applications/prometheus?ref=main"
 }
 
 include "root" {
