@@ -35,6 +35,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Boolean set to create the namespace | `bool` | `false` | no |
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | Name of the eks cluster | `string` | n/a | yes |
 | <a name="input_enable_loadbalancer"></a> [enable\_loadbalancer](#input\_enable\_loadbalancer) | Boolean to set if the service needs loadbalancer. Else uses NodePort | `bool` | `false` | no |
 | <a name="input_namespace_name"></a> [namespace\_name](#input\_namespace\_name) | Name of the namespace to be created | `string` | n/a | yes |

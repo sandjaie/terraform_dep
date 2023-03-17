@@ -19,3 +19,9 @@ variable "enable_loadbalancer" {
   type        = bool
   default     = false
 }
+
+variable "create_namespace" {
+  description = "Boolean set to create the namespace"
+  type        = bool
+  default     = false
+}

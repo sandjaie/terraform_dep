@@ -1,14 +1,15 @@
 module "namespace" {
+  count  = var.create_namespace ? 1 : 0
   source = "../../../../native/containers/eks/namespace"
 
-  namespace_name   = "services"
+  namespace_name   = var.namespace_name
   eks_cluster_name = var.eks_cluster_name
 }
 
 resource "kubernetes_deployment" "nginx" {
   metadata {
     name      = "nginx"
-    namespace = module.namespace.namespace_name
+    namespace = var.namespace_name
   }
   spec {
     replicas = var.nginx_replicas_count
@@ -40,7 +41,7 @@ resource "kubernetes_service" "nginx" {
   count = var.enable_loadbalancer ? 0 : 1
   metadata {
     name      = "nginx"
-    namespace = module.namespace.namespace_name
+    namespace = var.namespace_name
   }
   spec {
     selector = {
@@ -59,7 +60,7 @@ resource "kubernetes_service" "nginx" {
   count = var.enable_loadbalancer ? 1 : 0
   metadata {
     name      = "nginx"
-    namespace = module.namespace.namespace_name
+    namespace = var.namespace_name
   }
   spec {
     selector = {
