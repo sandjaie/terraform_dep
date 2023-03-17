@@ -1,6 +1,6 @@
 locals {
   namespaces = flatten([
-    kubernetes_namespace.services[*].metadata.name
+    kubernetes_namespace.services.metadata.*.name
   ])
 }
 
