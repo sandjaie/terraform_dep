@@ -44,7 +44,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_namespace_name"></a> [namespace\_name](#output\_namespace\_name) | n/a |
 | <a name="output_nginx_loadbalancer_status"></a> [nginx\_loadbalancer\_status](#output\_nginx\_loadbalancer\_status) | n/a |
 | <a name="output_nginx_nodeport_status"></a> [nginx\_nodeport\_status](#output\_nginx\_nodeport\_status) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
