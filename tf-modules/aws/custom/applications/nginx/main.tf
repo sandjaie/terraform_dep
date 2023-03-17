@@ -29,8 +29,7 @@ resource "kubernetes_deployment" "nginx" {
   }
 }
 
-resource "kubernetes_service" "nginx_nodeport" {
-  count = var.create_loadbalancer ? 0 : 1
+resource "kubernetes_service" "nginx" {
   metadata {
     name      = "nginx"
     namespace = var.namespace_name
@@ -39,26 +38,7 @@ resource "kubernetes_service" "nginx_nodeport" {
     selector = {
       app = "nginx-deployment"
     }
-    type = "NodePort"
-    port {
-      port      = 80
-      node_port = 30080
-      name      = "http"
-    }
-  }
-}
-
-resource "kubernetes_service" "nginx_loadbalancer" {
-  count = var.create_loadbalancer ? 1 : 0
-  metadata {
-    name      = "nginx"
-    namespace = var.namespace_name
-  }
-  spec {
-    selector = {
-      app = "nginx-deployment"
-    }
-    type = "LoadBalancer"
+    type = var.service_type
     port {
       port = 80
       name = "http"

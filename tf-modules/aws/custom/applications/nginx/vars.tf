@@ -14,10 +14,9 @@ variable "nginx_replicas_count" {
   default     = 2
 }
 
-variable "create_loadbalancer" {
-  description = "Boolean to set if the service needs loadbalancer. Else uses NodePort"
-  type        = bool
-  default     = false
+variable "service_type" {
+  description = "Service type for the nginx deployment. E.g LoadBalancer, NodePort, ClusterIP"
+  type        = string
 }
 
 variable "create_namespace" {

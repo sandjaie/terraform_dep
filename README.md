@@ -42,7 +42,7 @@
 – each module has a `README.md` file which
 describes more about the module.
 
-### application:
+### infra-env:
 
 ```
 ├── tenant-01
@@ -52,17 +52,23 @@ describes more about the module.
 │       │   ├── ap-south-1
 │       │   │   ├── dev
 │       │   │   ├── production
-│       │   │   ├── staging
-│       │   │   └── region.hcl
-│       │   └── common.hcl
+│       │   │   ├── region.hcl
+│       │   │   └── staging
+│       │   ├── common.hcl
+│       │   └── region-2
+│       │       ├── dev
+│       │       ├── production
+│       │       ├── staging
+│       │       └── region.hcl
 │       └── gcp
-│           └── region
+│           └── region-1
 │               ├── dev
 │               ├── production
 │               └── staging
 └── terragrunt.hcl
 ```
 
-`application` directory is where I have deployed the infrastructure. <br>
+`infra-env` directory is where I have deployed the infrastructure. `tenant-01` is a company which has infrastructure \
+in AWS and GCP in different regions with multiple environments.<br>
 – I have used terragrunt to apply the tf-modules which keeps the code DRY. <br>
 – The variables are placed at different levels such as common, account, region, environment.

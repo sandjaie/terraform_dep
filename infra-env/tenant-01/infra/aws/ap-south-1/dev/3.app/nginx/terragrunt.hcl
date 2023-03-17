@@ -12,7 +12,7 @@ dependency "eks" {
 
 
 inputs = {
-  eks_cluster_name    = dependency.eks.outputs.eks_cluster_name
-  namespace_name      = "services"
-  create_loadbalancer = true
+  eks_cluster_name = dependency.eks.outputs.eks_cluster_name
+  namespace_name   = "services"
+  service_type     = "LoadBalancer"
 }

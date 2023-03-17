@@ -30,7 +30,7 @@ resource "aws_eks_cluster" "eks_cluster" {
   tags = local.tags
 }
 
-resource "aws_cloudwatch_log_group" "example" {
+resource "aws_cloudwatch_log_group" "log_group" {
   count = var.enable_cluster_cw_logs ? 1 : 0
 
   name              = "/aws/eks/${var.cluster_name}/cluster"
