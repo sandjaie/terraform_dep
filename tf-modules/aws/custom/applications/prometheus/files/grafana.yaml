@@ -7,3 +7,11 @@ datasources:
       url: http://prometheus-server.prometheus.svc.cluster.local
       access: proxy
       isDefault: true
+service:
+  enabled: true
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+  annotations: {}
+  labels: {}
+  portName: service
