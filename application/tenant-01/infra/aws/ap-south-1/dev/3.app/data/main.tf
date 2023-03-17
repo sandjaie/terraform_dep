@@ -11,10 +11,12 @@ output "host" {
 }
 
 output "cluster_ca_certificate" {
-  value = base64decode(data.aws_eks_cluster.cluster1.certificate_authority[0].data)
+  value     = base64decode(data.aws_eks_cluster.cluster1.certificate_authority[0].data)
+  sensitive = true
 }
 
 output "token" {
-  value = data.aws_eks_cluster_auth.cluster1.token
+  value     = data.aws_eks_cluster_auth.cluster1.token
+  sensitive = true
 }
 
