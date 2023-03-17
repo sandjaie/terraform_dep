@@ -4,9 +4,9 @@ repos:
     hooks:
       - id: terraform_fmt
         stages: [commit]
-      - id: terraform_docs
-        stages: [commit]
-        args:
-          - --hook-config=--path-to-file=README.md
-          - --hook-config=--add-to-existing-file=true
-          - --hook-config=--create-file-if-not-exist=true
+#      - id: terraform_docs
+#        stages: [commit]
+#        args:
+#          - --hook-config=--path-to-file=README.md
+#          - --hook-config=--add-to-existing-file=true
+#          - --hook-config=--create-file-if-not-exist=true

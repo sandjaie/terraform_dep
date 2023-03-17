@@ -1,67 +1,15 @@
-resource "kubernetes_deployment" "prometheus" {
-  metadata {
-    name      = "prometheus"
-    namespace = var.namespace_name
-  }
-  spec {
-    replicas = var.prometheus_replicas_count
-    selector {
-      match_labels = {
-        app = "prometheus-deployment"
-      }
-    }
-    template {
-      metadata {
-        labels = {
-          app = "prometheus-deployment"
-        }
-      }
-      spec {
-        container {
-          name  = "prometheus"
-          image = "prom/prometheus"
-          port {
-            container_port = 9090
-          }
-        }
-      }
-    }
-  }
+resource "kubernetes_manifest" "configmap" {
+  manifest = yamldecode(file("files/configmap.yml"))
 }
 
-resource "kubernetes_service" "prometheus_nodeport" {
-  count = var.create_loadbalancer ? 0 : 1
-  metadata {
-    name      = "prometheus"
-    namespace = var.namespace_name
-  }
-  spec {
-    selector = {
-      app = "prometheus-deployment"
-    }
-    type = "NodePort"
-    port {
-      port      = 80
-      node_port = 30080
-      name      = "http"
-    }
-  }
+resource "kubernetes_manifest" "deployment" {
+  manifest = yamldecode(file("files/deployment.yml"))
 }
 
-resource "kubernetes_service" "prometheus_loadbalancer" {
-  count = var.create_loadbalancer ? 1 : 0
-  metadata {
-    name      = "prometheus"
-    namespace = var.namespace_name
-  }
-  spec {
-    selector = {
-      app = "prometheus-deployment"
-    }
-    type = "LoadBalancer"
-    port {
-      port = 80
-      name = "http"
-    }
-  }
+resource "kubernetes_manifest" "pvc" {
+  manifest = yamldecode(file("files/pvc.yml"))
+}
+
+resource "kubernetes_manifest" "service" {
+  manifest = yamldecode(file("files/service.yml"))
 }
