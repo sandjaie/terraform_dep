@@ -29,7 +29,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_cluster_ca_certificate"></a> [cluster\_ca\_certificate](#input\_cluster\_ca\_certificate) | n/a | `any` | n/a | yes |
+| <a name="input_host"></a> [host](#input\_host) | n/a | `any` | n/a | yes |
 | <a name="input_namespace_list"></a> [namespace\_list](#input\_namespace\_list) | List of namespaces to be created | `list(string)` | n/a | yes |
+| <a name="input_token"></a> [token](#input\_token) | n/a | `any` | n/a | yes |
 
 ## Outputs
 
