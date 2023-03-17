@@ -37,8 +37,8 @@ resource "kubernetes_deployment" "nginx" {
   }
 }
 
-resource "kubernetes_service" "nginx" {
-  count = var.enable_loadbalancer ? 0 : 1
+resource "kubernetes_service" "nginx_nodeport" {
+  count = var.create_loadbalancer ? 0 : 1
   metadata {
     name      = "nginx"
     namespace = var.namespace_name
@@ -56,8 +56,8 @@ resource "kubernetes_service" "nginx" {
   }
 }
 
-resource "kubernetes_service" "nginx" {
-  count = var.enable_loadbalancer ? 1 : 0
+resource "kubernetes_service" "nginx_loadbalancer" {
+  count = var.create_loadbalancer ? 1 : 0
   metadata {
     name      = "nginx"
     namespace = var.namespace_name

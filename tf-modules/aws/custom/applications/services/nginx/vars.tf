@@ -14,7 +14,7 @@ variable "nginx_replicas_count" {
   default     = 2
 }
 
-variable "enable_loadbalancer" {
+variable "create_loadbalancer" {
   description = "Boolean to set if the service needs loadbalancer. Else uses NodePort"
   type        = bool
   default     = false
