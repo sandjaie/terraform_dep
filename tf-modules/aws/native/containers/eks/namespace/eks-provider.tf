@@ -1,13 +1,3 @@
-#provider "kubernetes" {
-#  host                   = var.host
-#  cluster_ca_certificate = var.cluster_ca_certificate
-#  token                  = var.token
-#}
-#
-#variable "host" {}
-#variable "token" {}
-#variable "cluster_ca_certificate" {}
-
 data "aws_eks_cluster" "cluster" {
   name = var.eks_cluster_name
 }
