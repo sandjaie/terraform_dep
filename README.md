@@ -64,5 +64,5 @@ describes more about the module.
 ```
 
 `application` directory is where I have deployed the infrastructure. <br>
-I have used terragrunt to apply the tf-modules which keeps the code DRY.
-The variables are placed at different levels such as common, account, region, environment.
+– I have used terragrunt to apply the tf-modules which keeps the code DRY. <br>
+– The variables are placed at different levels such as common, account, region, environment.
