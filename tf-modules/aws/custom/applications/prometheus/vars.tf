@@ -22,7 +22,7 @@ variable "helm_chart_prometheus_name" {
 
 variable "helm_chart_prometheus_version" {
   type        = string
-  default     = "14.5.0"
+  default     = "19.7.0"
   description = "Prometheus Helm chart version."
 }
 
@@ -54,7 +54,6 @@ variable "settings_grafana" {
       enabled          = true
       storageClassName = "gp2"
     }
-    adminPassword = "admin"
   }
   description = "Additional settings which will be passed to Grafana Helm chart values."
 }
@@ -73,7 +72,7 @@ variable "helm_chart_grafana_name" {
 
 variable "helm_chart_grafana_version" {
   type        = string
-  default     = "6.15.0"
+  default     = "6.52.0"
   description = "Grafana Helm chart version."
 }
 
