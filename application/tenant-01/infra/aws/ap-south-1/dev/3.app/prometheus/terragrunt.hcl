@@ -12,7 +12,8 @@ dependency "eks" {
 
 
 inputs = {
-  eks_cluster_name = dependency.eks.outputs.eks_cluster_name
-  namespace_name   = "monitoring"
-  #create_loadbalancer = true
+  eks_cluster_name              = dependency.eks.outputs.eks_cluster_name
+  namespace_name                = "monitoring"
+  helm_chart_prometheus_version = "15.12.0"
+  helm_chart_grafana_version    = "6.21.0"
 }

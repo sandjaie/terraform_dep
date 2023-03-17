@@ -17,16 +17,16 @@ inputs = {
   cni_addon_version       = "v1.12.5-eksbuild.2"
   #kube_proxy_version = "v1.23.16-eksbuild.2"
   #coredns_version    = "v1.8.7-eksbuild.4"
-  ebs_csi_driver_version  = "v1.12.5-eksbuild.2"
+  ebs_csi_driver_version  = "v1.16.1-eksbuild.1"
   nodegroup_name          = "app1"
   endpoint_private_access = true
   endpoint_public_access  = true
 
   nodegroup = {
     min_size         = 1
-    max_size         = 2
-    desired_size     = 1
+    max_size         = 3
+    desired_size     = 2
     root_volume_size = 8
-    instance_type    = "t3.small"
+    instance_type    = "t3.medium"
   }
 }
